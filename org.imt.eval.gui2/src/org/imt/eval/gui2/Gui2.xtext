@@ -1,0 +1,38 @@
+grammar org.imt.eval.gui2.Gui2 with org.eclipse.xtext.common.Terminals
+
+generate gui2 "http://www.imt.org/eval/gui2/Gui2"
+
+GUI: 
+	{GUI} frames+=Frame*
+;
+
+Frame:
+	'frame' frameName=FrameName '{'
+	 	'title:' title=STRING
+		'width:' width=INT
+		'height:' height=INT
+		'content' '{'
+			frameContents+=FrameContent*
+		'}'
+	'}'
+;
+
+FrameName:
+	name=ID
+;
+
+FrameCall:
+	frameName=[FrameName]
+;
+
+FrameContent:
+	Label | Button
+;
+
+Label:
+	'label:' content=STRING
+;
+
+Button:
+	'button:' content=STRING '->' frameCall=FrameCall
+;

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.imt.eval.gui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.imt.eval.gui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.imt.eval.gui.gui,
+ org.imt.eval.gui,
+ org.imt.eval.gui.gui.impl,
+ org.imt.eval.gui.validation,
+ org.imt.eval.gui.services,
+ org.imt.eval.gui.serializer,
+ org.imt.eval.gui.generator,
+ org.imt.eval.gui.gui.util,
+ org.imt.eval.gui.scoping,
+ org.imt.eval.gui.parser.antlr.internal,
+ org.imt.eval.gui.parser.antlr
+Import-Package: org.apache.log4j

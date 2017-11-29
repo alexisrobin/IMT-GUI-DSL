@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.imt.eval.gui2.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.imt.eval.gui2.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.imt.eval.gui2,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.imt.eval.gui2.ide.contentassist.antlr.internal,
+ org.imt.eval.gui2.ide.contentassist.antlr
+

@@ -1,0 +1,26 @@
+grammar org.imt.eval.gui.Gui with org.eclipse.xtext.common.Terminals
+
+generate gui "http://www.imt.org/eval/gui/Gui"
+
+Frame:
+	{Frame} 'frame' name=ID '{'
+	 	'title:' title=STRING
+		'width:' width=INT
+		'height:' height=INT
+		'content' '{'
+			frameContents+=FrameContent*
+		'}'
+	'}'
+;
+
+FrameContent:
+	Label | Button
+;
+
+Label:
+	'label:' content=STRING
+;
+
+Button:
+	'button:' content=STRING
+;
